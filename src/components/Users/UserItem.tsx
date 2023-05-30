@@ -15,7 +15,7 @@ const UserItem = ({ user }: UserItemProps) => {
         className={classes.container}
         >
             <Group noWrap>
-                <Avatar src={user?.avatar} size={94} radius="md" />
+                <Avatar alt='User Image' src={user?.avatar} size={94} radius="md" />
                 <div>
                     <Text fz="lg" fw={500} className={classes.name}>
                         {user?.first_name} {user?.last_name}

@@ -21,7 +21,7 @@ declare module '@mantine/core' {
 const theme: MantineThemeOverride = {
     colorScheme: 'dark',
     colors,
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'Inter, sans-serif',
     lineHeight: '1.25em',
     fontSizes: {
         xs: '12px',
@@ -31,7 +31,7 @@ const theme: MantineThemeOverride = {
         xl: '40px',
     },
     headings: {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: 'Inter, sans-serif',
         sizes: {
             h1: { fontSize: '64px' },
             h2: { fontSize: '56px' },
