@@ -14,8 +14,11 @@ export const getUsers = async (page: number): Promise<UserResponse> => {
             page
         }
         return data
-    } catch (error) {
-        const errorMessage = error?.detail || error?.message || 'Failed to fetch data'
-        throw new Error(errorMessage);
+    } catch (error: unknown) {
+        let errorMessage: string = 'Failed to fetch data'
+        if (error instanceof Error) {
+            errorMessage = error.message;
+        }
+        throw new Error(errorMessage)
     }
 }

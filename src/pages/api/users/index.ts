@@ -37,8 +37,11 @@ const getUsers = async (
             page: page
         }
         res.status(200).json(data)
-    } catch (error) {
-        const errorMessage = error?.detail || error?.message || 'Failed to fetch data'
+    } catch (error: unknown) {
+        let errorMessage: string = 'Failed to fetch data'
+        if (error instanceof Error) {
+            errorMessage = error.message;
+        }
         res.status(500).json({ error: errorMessage })
     }
 }

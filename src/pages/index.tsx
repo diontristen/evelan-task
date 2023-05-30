@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout from '@/components/Layout'
 import { Button, useMantineTheme } from '@mantine/core'
 import { useRouter } from 'next/router'
+import Banner from '@/components/Banner'
 export default function Home() {
   const theme = useMantineTheme()
   const router = useRouter()
@@ -40,8 +41,9 @@ export default function Home() {
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="nositelinkssearchbox" />
       </Head>
-      <Layout>
-        <Button
+      {/* <Layout> */}
+        <Banner/>
+        {/* <Button
           onClick={handlePush}
           sx={{
             backgroundColor: theme.colors.primary[6],
@@ -54,8 +56,8 @@ export default function Home() {
           }}
         >
           Go to Cool Users
-        </Button>
-      </Layout>
+        </Button> */}
+      {/* </Layout> */}
     </>
   )
 }
